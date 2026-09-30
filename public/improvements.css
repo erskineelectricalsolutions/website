@@ -1,0 +1,36 @@
+/* Extends the established red, white and charcoal design. */
+.nav-links a{font-size:14px;letter-spacing:.6px;min-height:44px;display:flex;align-items:center}
+.social-links a{width:44px;height:44px;justify-content:center}
+.telephone{display:inline-flex;min-height:44px;align-items:center}
+.footer-nav a{display:inline-flex;min-height:44px;align-items:center}
+.masthead{height:154px}.hero{min-height:520px;padding:56px 32px;align-items:center;justify-content:flex-start}
+.hero-copy{max-width:700px;text-align:left;padding:32px 38px;background:#c60000}
+.hero h1{font-size:clamp(32px,3.3vw,46px)}.hero .eyebrow{font-size:15px;margin-bottom:14px}
+.hero .hero-coverage{font-size:18px}.hero .actions{margin-bottom:0}.hero .button:hover{background:#fff1f1;color:#a00000}
+.trust-strip{background:#202020}.trust-strip>.wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding-block:15px}.trust-strip a{color:#fff;font-size:16px;padding-block:8px}
+.service-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0 0 36px}
+.service-links article{padding:26px;border:1px solid var(--line);border-top:4px solid var(--action);display:flex;flex-direction:column;min-width:0}
+.service-links h2,.service-links h3{font:400 27px/1.3 'Fjalla One',Arial,sans-serif;margin-bottom:18px}.service-links h3 a,.service-links h2 a{text-decoration:none;color:var(--ink)}
+.service-links p{font-size:17px}.service-links article>a:last-child{margin-top:auto;font-size:16px}
+.price-line{font-weight:600;color:var(--ink)}.center{text-align:center;margin-top:30px}
+.coverage-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.featured-review{margin:0;border-left:4px solid var(--action);padding:16px 24px}.featured-review blockquote{font:400 29px/1.45 'Fjalla One',Arial,sans-serif;margin:0 0 20px}.featured-review figcaption{font-size:16px;margin-bottom:14px}
+.breadcrumbs{padding-top:24px;font-size:15px}.breadcrumbs ol{display:flex;gap:8px 14px;list-style:none;flex-wrap:wrap;padding:0;margin:0}.breadcrumbs li+li:before{content:'/';color:#777;padding-right:14px}.breadcrumbs+.section{padding-top:30px}
+.service-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:52px;align-items:start}.service-photo{width:100%;aspect-ratio:4/3;object-fit:cover}
+.lead{font-size:21px;color:var(--ink)}li{margin-bottom:10px}.service-detail{max-width:900px;margin:52px auto 0}.service-detail>section{margin-bottom:42px}
+.notice{padding:26px 30px;border-left:4px solid var(--action);background:var(--soft);margin-block:32px}.notice>:last-child{margin-bottom:0}
+.jump-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-block:30px}.jump-links a{padding-block:8px;min-height:44px;font-size:16px}
+.card-copy h2{font-size:27px}.pricing .card-copy{padding-top:6px}.pricing h2{font:600 24px/1.35 'Source Sans Pro',Arial,sans-serif}
+.faq details{border-bottom:1px solid #ccc}.faq summary{padding:18px 6px;font-weight:600;min-height:48px;color:var(--ink)}.faq details p{padding:0 6px 14px;margin:0}
+.source-note{font-size:16px;margin-top:24px}.legal h2{margin-top:36px}.legal a{overflow-wrap:anywhere}
+.reviews{background:#222}.reviews h1{margin-bottom:0}.blog-post .post-image{aspect-ratio:3/4}
+.contact .small{font-size:16px}.contact .small a{white-space:nowrap}
+@media(min-width:1500px){.hero{min-height:570px;padding-left:max(32px,calc((100vw - 1280px)/2))}}
+@media(max-width:1100px){.service-links{gap:18px}.service-links article{padding:20px}.nav-links a{font-size:14px}.coverage-panel{gap:32px}}
+@media(max-width:760px){.masthead{height:135px}.hero{padding:28px 20px;min-height:0}.hero-copy{padding:26px 22px;max-width:100%;background:#b90000ed}.hero .eyebrow{font-size:14px}.hero h1{font-size:34px}.hero .hero-coverage{font-size:17px}.hero p{font-size:18px}.hero .actions{gap:10px}.hero .button{padding:12px 18px}.trust-strip>.wrap{display:grid;gap:0}.service-links,.coverage-panel,.service-intro{grid-template-columns:1fr}.service-links article{padding:24px}.service-intro{gap:24px}.service-detail{margin-top:32px}.notice{padding:22px}.featured-review{padding:12px 20px}.featured-review blockquote{font-size:26px}.breadcrumbs{font-size:14px}.service-photo{max-height:330px}.lead{font-size:19px}}
+@media(max-width:420px){.masthead{height:auto;min-height:126px;flex-wrap:wrap;padding-block:10px}.header-contact{gap:2px}.hero h1{font-size:31px}.logo,.logo img{width:140px}.hero .button{font-size:14px}.hero .actions{flex-direction:column;align-items:stretch}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Google reviews are a dated snapshot with direct source links. */
+.google-summary{border-block:1px solid var(--line)}.google-summary>.wrap{display:flex;align-items:center;justify-content:space-between;gap:28px}.google-summary h2{margin-bottom:14px}.google-rating{font-size:24px;margin-bottom:10px}.google-summary .source-note{margin:0}.google-summary .actions{align-items:center;margin:0}.review-source-title{color:#fff;text-align:center;margin:44px 0 24px}.review-source-link{text-align:center;margin:28px 0 52px}.review-source-link a{color:#fff;display:inline-block;padding:10px}.google-summary .actions>a:not(.button){padding-block:10px}
+@media(max-width:760px){.google-summary>.wrap{flex-direction:column;align-items:flex-start}.google-summary .actions{align-items:flex-start}.google-rating{font-size:22px}}

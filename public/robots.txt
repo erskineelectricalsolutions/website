@@ -1,0 +1,6 @@
+# Public content is available to search and AI crawlers.
+# Preview HTML carries noindex; production HTML is indexable.
+User-agent: *
+Allow: /
+
+Sitemap: https://erskineelectricalsolutions.com/sitemap.xml
