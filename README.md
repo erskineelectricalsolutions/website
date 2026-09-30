@@ -21,9 +21,9 @@ Contact buttons use editable email drafts and telephone links. There are no form
 
 ## Deployment status
 
-The source was uploaded to this repository on 30 September 2026. The repository is currently public with the owner’s authorised collaborator’s approval; the repository owner can change visibility later.
+The source was uploaded to this repository on 30 September 2026. The repository is currently public; the repository owner can change visibility later.
 
-A separate Cloudflare Pages Direct Upload preview project named `erskine-electrical-preview` has been created in the business account. Its first upload is pending. It is not connected to GitHub and does not deploy automatically. The future Git-integrated production project requires the repository owner to authorise Cloudflare for this repository; Direct Upload projects cannot be converted to Git integration. Alternatively, Direct Upload can later be automated through a separately authorised GitHub Actions workflow.
+The website is deployed in the business Cloudflare account at [erskine-electrical-preview1.pages.dev](https://erskine-electrical-preview1.pages.dev), using the Pages Direct Upload project `erskine-electrical-preview1`. All 15 HTML pages and 304 assets passed live checks on 30 September 2026, including the PDF, redirects, real 404 responses and preview noindex headers. It is not connected to GitHub and does not deploy automatically. The future Git-integrated production project requires the repository owner to authorise Cloudflare for this repository; Direct Upload projects cannot be converted to Git integration. Alternatively, Direct Upload can later be automated through a separately authorised GitHub Actions workflow.
 
 The live domain and email are unchanged. Domain cutover awaits access to Squarespace Domains, a complete DNS export, and coordinated DNSSEC handling.
 
