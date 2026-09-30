@@ -19,7 +19,15 @@ Run `npm run build`, then `npm run check` and `npm start`. Open http://localhost
 
 Contact buttons use editable email drafts and telephone links. There are no forms, databases, analytics scripts or paid widgets. Existing named testimonials are retained.
 
-## Cloudflare Pages settings
+## Deployment status
+
+The source was uploaded to this repository on 30 September 2026. The repository is currently public with the owner’s authorised collaborator’s approval; the repository owner can change visibility later.
+
+A separate Cloudflare Pages Direct Upload preview project named `erskine-electrical-preview` has been created in the business account. Its first upload is pending. It is not connected to GitHub and does not deploy automatically. The future Git-integrated production project requires the repository owner to authorise Cloudflare for this repository; Direct Upload projects cannot be converted to Git integration. Alternatively, Direct Upload can later be automated through a separately authorised GitHub Actions workflow.
+
+The live domain and email are unchanged. Domain cutover awaits access to Squarespace Domains, a complete DNS export, and coordinated DNSSEC handling.
+
+## Future Git-integrated Cloudflare Pages settings
 
 - Repository: `erskineelectricalsolutions/website`
 - Production branch: `main`
