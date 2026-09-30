@@ -34,3 +34,7 @@
 /* Google reviews are a dated snapshot with direct source links. */
 .google-summary{border-block:1px solid var(--line)}.google-summary>.wrap{display:flex;align-items:center;justify-content:space-between;gap:28px}.google-summary h2{margin-bottom:14px}.google-rating{font-size:24px;margin-bottom:10px}.google-summary .source-note{margin:0}.google-summary .actions{align-items:center;margin:0}.review-source-title{color:#fff;text-align:center;margin:44px 0 24px}.review-source-link{text-align:center;margin:28px 0 52px}.review-source-link a{color:#fff;display:inline-block;padding:10px}.google-summary .actions>a:not(.button){padding-block:10px}
 @media(max-width:760px){.google-summary>.wrap{flex-direction:column;align-items:flex-start}.google-summary .actions{align-items:flex-start}.google-rating{font-size:22px}}
+
+/* Availability and charge information stay visible on every page. */
+.email-bar{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 24px}.availability-label{font-weight:600}.hero .hero-availability{font-size:18px;line-height:1.5;margin-bottom:0}
+@media(max-width:760px){.email-bar{flex-direction:column;gap:2px;padding-block:8px}.hero .hero-availability{font-size:17px}}

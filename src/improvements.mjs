@@ -48,7 +48,7 @@ export const services = [
 ];
 
 export const metadata = {
-  '/': ['Electrician in Fife | Erskine Electrical Solutions', 'Electrical services across Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. EICRs, rewiring, consumer unit upgrades and repairs. Ask for a quote.'],
+  '/': ['Electrician in Fife | Erskine Electrical Solutions', 'Electrician covering Fife and Central Scotland with 24-hour availability, 7 days a week. EICRs, rewiring and repairs. Call-out charges may apply.'],
   '/about-us': ['About Keir Erskine | Erskine Electrical Solutions', 'Meet Erskine Electrical Solutions. Read about electrical qualifications, SELECT membership, testing, certification and work for homes and businesses.'],
   '/services': ['Electrical Services in Fife | EICRs, Rewiring & Repairs', 'Explore domestic and commercial electrical services: EICRs, rewiring, consumer unit upgrades, fault finding, alarms, PAT and emergency lighting testing.'],
   '/pricing': ['Electrical Work Prices | Erskine Electrical Solutions', 'Guide prices for EICRs, rewiring, consumer unit upgrades, repairs and testing. Understand the stated inclusions and request a quote for your property.'],
