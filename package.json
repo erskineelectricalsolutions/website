@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "build": "node scripts/build.mjs",
-    "start": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs"
-  },
-  "engines": {
-    "node": ">=20"
-  }
+  "scripts": {"build": "node scripts/build.mjs", "build:sites": "node scripts/build.mjs && node scripts/build.mjs --sites-preview", "start": "node scripts/serve.mjs", "check": "node scripts/check.mjs", "check:preview": "node scripts/check-preview.mjs"},
+  "engines": {"node": ">=20"}
 }

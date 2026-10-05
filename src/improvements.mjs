@@ -1,3 +1,4 @@
+import { additionalPages } from './additional-services.mjs';
 export const reviewed = '2026-09-30';
 export const selectDirectory = 'https://select.org.uk/SELECT/Website/Find_Member/map.aspx?WebsiteKey=4d9a0542-1313-4a08-8c67-8a6a2310cf7c';
 export const coverage = 'Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk';
@@ -24,7 +25,8 @@ export const services = [
     points: ['Full property rewires and targeted kitchen or bathroom upgrades.', 'Wiring, socket and lighting layouts agreed around the project.', 'Testing and certification of the completed electrical work.'],
     price: 'Three-bedroom house guide: £3,500–£5,500',
     priceDetail: 'The published standard full-rewire guide includes a consumer unit upgrade, lighting, sockets and earthing/bonding. Room count, access, number of points and occupation affect the quote. Single-room/minor rewires are listed at £600–£1,100.',
-    prepare: 'Tell us whether the project is a full rewire, a renovation or work in one room. Share your postcode, room count, plans for sockets and lighting, and whether the property will be occupied. Discuss access, making good, decorating and the work schedule during the site visit. Good access is important for a rewire. An empty property is generally much easier to rewire than a lived-in home with furniture and belongings throughout. Clear access to rooms, walls and floor areas helps us work efficiently; moving and protecting furniture and working around occupants can add time and affect the cost. We will discuss access and preparation during the site visit.',
+    prepare: 'Tell us whether the project is a full rewire, a renovation or work in one room. Share your postcode, room count, plans for sockets and lighting, and whether the property will be occupied. Discuss access, making good, decorating and the work schedule during the site visit.',
+    accessNote: 'Good access is important for a rewire. An empty property is generally much easier to rewire than a lived-in home with furniture and belongings throughout. Clear access to rooms, walls and floor areas helps us work efficiently; moving and protecting furniture and working around occupants can add time and affect the cost. We will discuss access and preparation during the site visit.',
     faq: [
       ['Can you rewire just a kitchen or bathroom?', 'Yes. The service includes targeted upgrades as well as full property rewires. The existing installation and the proposed work need assessment before the scope and price can be confirmed.'],
       ['What changes the cost of a rewire?', 'Property size, access to walls and ceilings, socket and lighting quantities, and whether the building is occupied all affect the work. Commercial projects also vary by circuit count, distribution boards and supply type.'],
@@ -44,13 +46,14 @@ export const services = [
       ['What protection is included?', 'Our published specification describes individual RCBO protection and a surge protection device. Ask for the proposed unit, circuit count, testing and certification to be set out in your quotation.'],
       ['Will replacing the unit fix every existing wiring fault?', 'Existing wiring still needs assessment. Ask for any additional work to be identified and priced before authorising it; a new consumer unit alone does not replace the rest of the installation.']
     ]
-  }
+  },
+  ...additionalPages
 ];
 
 export const metadata = {
   '/': ['Electrician in Fife | Erskine Electrical Solutions', 'Electrician covering Fife and Central Scotland with 24-hour availability, 7 days a week. EICRs, rewiring and repairs. Call-out charges may apply.'],
   '/about-us': ['About Keir Erskine | Erskine Electrical Solutions', 'Meet Erskine Electrical Solutions. Read about electrical qualifications, SELECT membership, testing, certification and work for homes and businesses.'],
-  '/services': ['Electrical Services in Fife | EICRs, Rewiring & Repairs', 'Explore domestic and commercial electrical services: EICRs, rewiring, consumer unit upgrades, fault finding, alarms, PAT and emergency lighting testing.'],
+  '/services': ['Electrical Services in Fife | EICRs, Rewiring & Repairs', 'Electrical services for homes and businesses in Fife: EV charger enquiries, outdoor power, garden rooms, landlord services, small jobs and electrical testing.'],
   '/pricing': ['Electrical Work Prices | Erskine Electrical Solutions', 'Guide prices for EICRs, rewiring, consumer unit upgrades, repairs and testing. Understand the stated inclusions and request a quote for your property.'],
   '/service-areas': ['Electrician Service Areas | Fife & Central Scotland', 'Erskine Electrical Solutions covers Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. Contact us with your postcode and electrical enquiry.'],
   '/social-media-1': ['Our Work on Social Media | Erskine Electrical Solutions', 'Visit the genuine Erskine Electrical Solutions Instagram and Facebook accounts for electrical project photos and business updates.'],

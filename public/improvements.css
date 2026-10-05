@@ -38,3 +38,9 @@
 /* Availability and charge information stay visible on every page. */
 .email-bar{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 24px}.availability-label{font-weight:600}.hero .hero-availability{font-size:18px;line-height:1.5;margin-bottom:0}
 @media(max-width:760px){.email-bar{flex-direction:column;gap:2px;padding-block:8px}.hero .hero-availability{font-size:17px}}
+
+/* Quote-led services extend the existing service cards and page layout. */
+.hero .hero-service-link{font-size:17px;margin:22px 0 0}.hero-service-link a{color:#fff;text-underline-offset:4px}
+.service-intro.text-only{grid-template-columns:1fr;max-width:900px;margin-inline:auto}
+.quote-factors{margin-block:24px}.quote-factors>div{padding-block:15px;border-top:1px solid var(--line)}.quote-factors dt{font-weight:600;margin-bottom:5px}.quote-factors dd{margin:0;color:var(--muted)}
+.additional-services{margin-bottom:56px}

@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { services } from '../src/improvements.mjs';
+import { additionalServices, additionalPages, quotationNote, additionalWorkNote } from '../src/additional-services.mjs';
 const files=[];async function walk(dir){for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())await walk(p);else files.push(p);}}await walk('public');
 const pages=files.filter(f=>f.endsWith('.html'));const checks=[];const titles=new Set();const descriptions=new Set();
 const unescape=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&lt;','<').replaceAll('&gt;','>');
@@ -48,6 +49,23 @@ for(const [file,html] of htmls){if(file.endsWith('/404.html'))continue;const can
 assert(!sitemap.includes('/404'),'404 must not be in sitemap');
 for(const service of services){const html=htmls.get(`public/services/${service.slug}.html`);assert(html.includes('"@type":"Service"'),'Missing service schema');for(const [q,a] of service.faq){assert(unescape(html).includes(q)&&unescape(html).includes(a),'FAQ not in server-rendered HTML');}}
 const robots=await fs.readFile('public/robots.txt','utf8');assert(robots.includes('User-agent: *\nAllow: /')&&!/Disallow:\s*\//.test(robots),'Crawlers blocked');
+// Keep the new offers quote-based while the original pricing preservation check above remains in force.
+const servicesHtml=unescape(htmls.get('public/services.html'));
+const pricingHtml=unescape(htmls.get('public/pricing.html'));
+for(const service of additionalServices){
+ assert(servicesHtml.includes(service.name)&&servicesHtml.includes(service.summary),'Missing additional service: '+service.slug);
+ assert(pricingHtml.includes(service.factors),'Missing quotation factors: '+service.slug);
+}
+for(const service of additionalPages){
+ const html=unescape(htmls.get(`public/services/${service.slug}.html`));
+ const main=html.match(/<main\b[^>]*>(.*?)<\/main>/s)[1];
+ assert(!/£|"@type":"Offer"/.test(main),'New service must not invent a price: '+service.slug);
+ assert(main.includes(quotationNote)&&main.includes(additionalWorkNote),'Missing tailored quotation wording: '+service.slug);
+ const enquiry=[...main.matchAll(/href="(mailto:[^"]+)"/g)].map(m=>new URL(m[1])).find(u=>u.searchParams.get('subject').startsWith(service.name));
+ assert(enquiry,'Missing service-specific enquiry: '+service.slug);
+ for(const field of service.enquiryFields)assert(enquiry.searchParams.get('body').includes(field+':'),'Missing enquiry detail: '+field);
+}
+assert(htmls.get('public/index.html').includes('href="/services/ev-charger-installation"'),'Homepage must link to EV charging');
 const llms=await fs.readFile('public/llms.txt','utf8');for(const s of services)assert(llms.includes('/services/'+s.slug),'Machine-readable summary missing service');
 const report={checkedAt:new Date().toISOString(),pages:pages.length,files:files.length,galleryImages:data.galleries.reduce((n,g)=>n+g.images.length,0),checks,passed:true};
 await fs.mkdir('audit',{recursive:true});await fs.writeFile('audit/check-results.json',JSON.stringify(report,null,2));

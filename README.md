@@ -11,7 +11,8 @@ Run `npm run build`, then `npm run check` and `npm start`. Open http://localhost
 ## Edit the site
 
 - Original content, prices and galleries: `src/site.json`.
-- Service pages, FAQs and page metadata: `src/improvements.mjs`.
+- Core service pages, FAQs and page metadata: `src/improvements.mjs`.
+- Additional services, four dedicated pages and tailored quotation wording: `src/additional-services.mjs`.
 - Google review snapshot, date and source link: `src/google-reviews.mjs`. Refresh manually against Google and keep attribution.
 - Layout and contact links: `scripts/build.mjs`.
 - Styling: `public/styles.css` and `public/improvements.css`.
@@ -21,11 +22,15 @@ Contact buttons use editable email drafts and telephone links. There are no form
 
 ## Deployment status
 
-The source was uploaded to this repository on 30 September 2026. The repository is currently public; the repository owner can change visibility later.
+The source is held in this public business-owned repository. The live website is [erskineelectricalsolutions.com](https://erskineelectricalsolutions.com), hosted through the existing Cloudflare Pages Direct Upload project `erskine-electrical-preview1`.
 
-The website is deployed in the business Cloudflare account at [erskine-electrical-preview1.pages.dev](https://erskine-electrical-preview1.pages.dev), using the Pages Direct Upload project `erskine-electrical-preview1`. All 15 HTML pages and 304 assets passed live checks on 30 September 2026, including the PDF, redirects, real 404 responses and preview noindex headers. It is not connected to GitHub and does not deploy automatically. The future Git-integrated production project requires the repository owner to authorise Cloudflare for this repository; Direct Upload projects cannot be converted to Git integration. Alternatively, Direct Upload can later be automated through a separately authorised GitHub Actions workflow.
+The 5 October 2026 release includes eight additional service descriptions and four dedicated pages for home EV charging, outdoor power and lighting, garage/garden-room electrics and landlord electrical services. Smart home installations cover connected devices and controls, with lighting and heating as examples. New services use property-specific quotations; existing published guide prices are unchanged. The earlier rewiring access guidance is preserved.
 
-The live domain and email are unchanged. Domain cutover awaits access to Squarespace Domains, a complete DNS export, and coordinated DNSSEC handling.
+The site has 18 content pages plus a 404 page. Builds and checks cover links, metadata, assets, enquiry drafts, the original pricing text and quotation wording. Desktop and mobile layouts were reviewed. The published release's 257 public files matched the prepared release; unknown routes return 404 and the pages.dev hostname retains its noindex header.
+
+GitHub is not connected to automatic deployment. Pushing source here does not publish it to Cloudflare. Build and check the production `public/` output before a separate Direct Upload. The separate `build:sites`/`check:preview` commands produce and check a noindex review copy in `dist/`; do not upload that copy to the business domain.
+
+A production ZIP can omit unreferenced asset copies to fit the Cloudflare archive limit, but must retain every page-linked asset, responsive image variant, font, gallery image, PDF, `_headers` and `_redirects`. The 5 October release uploaded 259 files including the two configuration files; all original assets remain in the source repository. The improvements stylesheet uses a content-derived version in its URL to refresh returning browsers after styling changes.
 
 ## Future Git-integrated Cloudflare Pages settings
 
@@ -38,7 +43,7 @@ The live domain and email are unchanged. Domain cutover awaits access to Squares
 - Node.js: 22
 - No secrets required
 
-Cloudflare Git integration deploys updates after each push to main. Check the pages.dev deployment before connecting the business domain. The _headers file prevents indexing of pages.dev hosts; the business domain remains indexable.
+If Git integration is configured in future, it can deploy updates after each push to main. It is not enabled for the existing Direct Upload project. The `_headers` file prevents indexing of pages.dev hosts; the business domain remains indexable.
 
 ## Domain and email
 
