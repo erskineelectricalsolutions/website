@@ -44,3 +44,27 @@
 .service-intro.text-only{grid-template-columns:1fr;max-width:900px;margin-inline:auto}
 .quote-factors{margin-block:24px}.quote-factors>div{padding-block:15px;border-top:1px solid var(--line)}.quote-factors dt{font-weight:600;margin-bottom:5px}.quote-factors dd{margin:0;color:var(--muted)}
 .additional-services{margin-bottom:56px}
+
+/* Coverage pages reuse the site's photographs and clear enquiry routes. */
+.coverage-cards{margin-block:32px 48px;align-items:stretch}
+.coverage-cards article{border:1px solid var(--line);display:flex;flex-direction:column;background:#fff}
+.coverage-cards img{aspect-ratio:16/9}
+.coverage-cards .area-copy{padding:24px;display:flex;flex-direction:column;flex:1}
+.coverage-cards h2{text-align:left;text-transform:none;margin:0 0 14px}
+.coverage-cards h2 a{color:var(--ink);text-decoration:none}
+.coverage-cards p{font-size:17px}
+.coverage-cards .area-more{margin-top:auto;min-height:44px;display:flex;align-items:center;gap:10px;font-size:17px}
+.area-links{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.area-links a{border:1px solid var(--line);padding:10px 16px;min-height:44px;display:flex;align-items:center;text-decoration:none;font-size:17px;background:#fff}
+.area-links a:hover{border-color:var(--action);background:var(--soft)}
+.area-photo{width:100%;aspect-ratio:16/10;object-fit:cover}
+.area-localities{margin-block:48px}
+.locality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px}
+.locality-grid article{border-top:3px solid var(--action);padding-top:22px;min-width:0}
+.locality-grid h3{font-size:25px;margin-bottom:16px}
+.locality-grid p{font-size:17px}
+.locality-grid .place-list{font-weight:600;color:var(--ink)}
+.locality-grid:has(>article:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+.nearby-areas{margin-top:44px}
+.service-links:has(>article:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:760px){.coverage-cards,.locality-grid,.locality-grid:has(>article:nth-child(2):last-child),.service-links:has(>article:nth-child(4):last-child){grid-template-columns:1fr}.coverage-cards .area-copy{padding:22px}.coverage-cards img{max-height:230px}.locality-grid{gap:22px}.area-links{gap:8px}.area-links a{padding:10px 13px}.area-localities{margin-block:34px}.area-photo{max-height:290px}}

@@ -13,6 +13,8 @@ export const services = [
     prepare: 'Send your postcode, property type, approximate size and, if known, the number of circuits or consumer units. Mention whether the property is occupied and any access restrictions. Ask about the expected visit length and any interruption to the supply when arranging the inspection.',
     faq: [
       ['What does an EICR tell me?', 'It reports on the condition of the fixed electrical installation at the time of inspection and identifies observed issues that may need attention. It is an inspection report, rather than a promise that no future faults can occur.'],
+      ['What do C1, C2, C3 and FI mean?', 'C1 identifies an immediate danger needing action straight away. C2 identifies potential danger needing urgent remedial work. C3 recommends an improvement. FI means further investigation is needed without delay. A C1, C2 or FI observation makes the overall report unsatisfactory; C3 observations alone do not.'],
+      ['What happens after an unsatisfactory report?', 'The findings and their urgency should be explained so the next steps can be agreed. Ask for the scope and cost of remedial work or further investigation, and the documentation you will receive afterwards. An unsatisfactory report does not automatically mean the whole property needs rewiring.'],
       ['Does the inspection price include repairs?', 'The published guide covers the inspection and report. Ask for any remedial work and its cost to be identified in the written quotation before authorising it; do not assume repairs are included in an inspection price.'],
       ['Can you inspect a commercial property?', 'Yes. Commercial EICR guide prices are grouped by circuit count, with larger and more complex sites assessed individually. Share details of the premises and access so the scope can be agreed.']
     ],
@@ -29,6 +31,7 @@ export const services = [
     accessNote: 'Good access is important for a rewire. An empty property is generally much easier to rewire than a lived-in home with furniture and belongings throughout. Clear access to rooms, walls and floor areas helps us work efficiently; moving and protecting furniture and working around occupants can add time and affect the cost. We will discuss access and preparation during the site visit.',
     faq: [
       ['Can you rewire just a kitchen or bathroom?', 'Yes. The service includes targeted upgrades as well as full property rewires. The existing installation and the proposed work need assessment before the scope and price can be confirmed.'],
+      ['How do I know whether my property needs rewiring?', 'An older property does not automatically need a full rewire. The installation condition, inspection findings and proposed changes should be assessed. Share any previous EICR and describe known problems so the appropriate work can be discussed.'],
       ['What changes the cost of a rewire?', 'Property size, access to walls and ceilings, socket and lighting quantities, and whether the building is occupied all affect the work. Commercial projects also vary by circuit count, distribution boards and supply type.'],
       ['Does the guide price include decorating?', 'The published guide describes electrical work and does not state a making-good or decorating allowance. Ask for these items, fittings, materials and any applicable VAT to be clearly listed in your written quote.']
     ]
@@ -47,13 +50,32 @@ export const services = [
       ['Will replacing the unit fix every existing wiring fault?', 'Existing wiring still needs assessment. Ask for any additional work to be identified and priced before authorising it; a new consumer unit alone does not replace the rest of the installation.']
     ]
   },
+  {
+    slug: 'pat-testing', name: 'PAT testing', title: 'PAT testing in Fife and Central Scotland', sourceIndex: 7,
+    description: 'Portable appliance testing for landlords and businesses across Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. Ask about scope and a quote.',
+    intro: 'Portable appliance testing checks the condition of electrical appliances through visual inspection and appropriate electrical tests. Erskine Electrical Solutions offers PAT testing for landlords and commercial properties.',
+    points: ['Visual inspection and electrical testing appropriate to the equipment.', 'Testing for landlord-supplied appliances and equipment in business premises.', 'Certification on completion, with the scope agreed before the visit.'],
+    reasons: 'Enquire about appliances in offices, shops, workshops and rental accommodation. Tell us what equipment you have, how it is used and whether you need access arranged around staff, tenants or guests. Specialist equipment should be identified when booking so we can confirm what can be tested.',
+    price: 'See our published PAT testing guide',
+    priceDetail: 'The existing guide lists a £100 minimum call-out when PAT testing is the only work at the property, with additional appliances at £3 per item. If we are already working on site, the first ten appliances are listed at £70, with £3 per item thereafter. Confirm the total appliance count, inclusions and final quotation before booking.',
+    prepare: 'Send the postcode, premises type and approximate appliance count. Include previous records if available, items that cannot readily be unplugged and any deadline. Agree access to equipment and any disruption before the visit; make sure someone is available to identify the appliances included in the job.',
+    enquiryFields: ['Premises type','Approximate appliance count','Equipment types','Access times / deadline'],
+    faq: [
+      ['Is PAT testing the same as an EICR?', 'No. PAT testing concerns appliances. An EICR assesses the fixed electrical installation, including its circuits. If you need both, include them in your enquiry so their separate scopes can be agreed.'],
+      ['Does every workplace appliance need an annual test?', 'There is no blanket requirement for annual PAT testing of every workplace appliance. HSE recommends a risk-based approach to maintenance, taking account of the equipment and its use. Inspection and testing intervals should reflect those risks; requirements for particular premises should be checked separately.'],
+      ['What happens if an appliance has a problem?', 'Any identified problem will be explained. An unsafe appliance should be taken out of use until it has been made safe or replaced. Repairs and replacement equipment are not automatically included in the testing quotation.'],
+      ['Can testing be arranged alongside other electrical work?', 'Yes, ask when booking. The published pricing distinguishes a standalone PAT visit from testing while we are already working on site. Confirm the equipment list and total cost with us.']
+    ],
+    guidance: ['HSE: portable appliance testing questions', 'https://www.hse.gov.uk/electricity/faq-portable-appliance-testing.htm'],
+    related: ['eicr','landlord-electrical-services','consumer-unit-upgrades']
+  },
   ...additionalPages
 ];
 
 export const metadata = {
-  '/': ['Electrician in Fife | Erskine Electrical Solutions', 'Electrician covering Fife and Central Scotland with 24-hour availability, 7 days a week. EICRs, rewiring and repairs. Call-out charges may apply.'],
+  '/': ['Electrician | Fife & Central Scotland | Erskine Electrical Solutions', 'Electrical services across Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. EICRs, rewiring, PAT testing and home EV charging.'],
   '/about-us': ['About Keir Erskine | Erskine Electrical Solutions', 'Meet Erskine Electrical Solutions. Read about electrical qualifications, SELECT membership, testing, certification and work for homes and businesses.'],
-  '/services': ['Electrical Services in Fife | EICRs, Rewiring & Repairs', 'Electrical services for homes and businesses in Fife: EV charger enquiries, outdoor power, garden rooms, landlord services, small jobs and electrical testing.'],
+  '/services': ['Electrical Services | Fife & Central Scotland', 'Electrical services across Fife and Central Scotland: EICRs, PAT testing, rewiring, home EV charging, outdoor power, landlord services and repairs.'],
   '/pricing': ['Electrical Work Prices | Erskine Electrical Solutions', 'Guide prices for EICRs, rewiring, consumer unit upgrades, repairs and testing. Understand the stated inclusions and request a quote for your property.'],
   '/service-areas': ['Electrician Service Areas | Fife & Central Scotland', 'Erskine Electrical Solutions covers Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. Contact us with your postcode and electrical enquiry.'],
   '/social-media-1': ['Our Work on Social Media | Erskine Electrical Solutions', 'Visit the genuine Erskine Electrical Solutions Instagram and Facebook accounts for electrical project photos and business updates.'],

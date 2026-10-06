@@ -12,6 +12,7 @@ Run `npm run build`, then `npm run check` and `npm start`. Open http://localhost
 
 - Original content, prices and galleries: `src/site.json`.
 - Core service pages, FAQs and page metadata: `src/improvements.mjs`.
+- Service-area hub, six regional pages and town coverage: `src/service-areas.mjs`.
 - Additional services, four dedicated pages and tailored quotation wording: `src/additional-services.mjs`.
 - Google review snapshot, date and source link: `src/google-reviews.mjs`. Refresh manually against Google and keep attribution.
 - Layout and contact links: `scripts/build.mjs`.
@@ -26,7 +27,9 @@ The source is held in this public business-owned repository. The live website is
 
 The 5 October 2026 release includes eight additional service descriptions and four dedicated pages for home EV charging, outdoor power and lighting, garage/garden-room electrics and landlord electrical services. Smart home installations cover connected devices and controls, with lighting and heating as examples. New services use property-specific quotations; existing published guide prices are unchanged. The earlier rewiring access guidance is preserved.
 
-The site has 18 content pages plus a 404 page. Builds and checks cover links, metadata, assets, enquiry drafts, the original pricing text and quotation wording. Desktop and mobile layouts were reviewed. The published release's 257 public files matched the prepared release; unknown routes return 404 and the pages.dev hostname retains its noindex header.
+The 6 October 2026 update adds a service-area hub linking to detailed pages for Fife, Edinburgh, the Lothians, Dundee, Stirling and Falkirk. Towns and neighbourhoods are grouped within those areas, with practical visit guidance and links to electrical services. Lochgelly is one town in the Fife list; the site does not emphasise a residential base or claim local offices. A dedicated PAT testing page uses the existing service and published prices. EICR and rewiring guidance is expanded, and service pages link back to the coverage pages.
+
+The site has 25 content pages plus a 404 page. Builds and checks cover links, metadata, assets, enquiry drafts, the original pricing text, structured data and sitemap inclusion. Desktop and mobile checks cover the new coverage and PAT routes. New town-specific pages should be supported by useful, verified local information rather than duplicated regional copy.
 
 GitHub is not connected to automatic deployment. Pushing source here does not publish it to Cloudflare. Build and check the production `public/` output before a separate Direct Upload. The separate `build:sites`/`check:preview` commands produce and check a noindex review copy in `dist/`; do not upload that copy to the business domain.
 
